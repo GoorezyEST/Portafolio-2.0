@@ -1,0 +1,28 @@
+.transition_container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transition {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-main);
+  padding: 0 42px;
+  border-radius: 8px;
+}
+
+.transition > svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .transition {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}

@@ -1,0 +1,151 @@
+.main_container {
+  width: 100%;
+  height: 100%;
+}
+
+.transition_container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transition {
+  width: 25%;
+  height: 25%;
+  background-color: var(--black-main);
+  padding: 0 42px;
+}
+
+@media screen and (orientation: portrait) {
+  .transition {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+}
+
+.transition > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: auto;
+  padding: 100px 50px 200px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  background-color: var(--black-main);
+}
+
+@media screen and (max-width: 700px) {
+  .page {
+    padding: 100px 20px 100px 20px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  column-gap: 10%;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.data_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
+}
+
+.text > h2 {
+  font-weight: 800;
+  font-size: clamp(16px, 4vw, 36px);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  color: var(--pink);
+  user-select: none;
+  cursor: default;
+}
+
+.text > p {
+  font-weight: 600;
+  font-size: clamp(10px, 2vw, 18px);
+  text-align: justify;
+  color: var(--white-main);
+  user-select: none;
+  cursor: default;
+  margin-bottom: 12px;
+}
+
+.line {
+  width: 15px;
+  height: 100%;
+  background-color: var(--pink);
+}
+
+.svg_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .svg_container {
+    display: none;
+  }
+}
+
+.svg_container > svg {
+  width: 250px;
+  height: 250px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 14px;
+}
+
+.tech > p {
+  font-weight: 600;
+  font-size: clamp(10px, 2vw, 18px);
+  text-align: justify;
+  color: var(--white-main);
+  user-select: none;
+  cursor: default;
+}
+
+.tech_icons {
+  width: max-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--pink-transparent);
+  padding: 8px;
+  gap: 8px;
+}
+
+.tech_icons > svg {
+  width: clamp(12px, 1.5vw, 16px);
+  height: clamp(12px, 1.5vw, 16px);
+}

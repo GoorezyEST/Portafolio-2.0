@@ -1,0 +1,17 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_container {
+  width: 40%;
+  height: 40%;
+}
+
+.logo_container > svg {
+  width: 100%;
+  height: 100%;
+}

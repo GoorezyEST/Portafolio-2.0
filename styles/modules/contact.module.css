@@ -1,0 +1,100 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 75px;
+}
+
+.svg_container {
+  width: 30%;
+  height: max-content;
+}
+
+@media screen and (orientation: portrait) {
+  .svg_container {
+    display: none;
+  }
+}
+
+.svg_container > svg {
+  width: 100%;
+}
+
+.social_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+@media screen and (orientation: portrait) {
+  .social_container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.social {
+  width: 100px;
+  height: 100px;
+  padding: 25px;
+  position: relative;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.after,
+.before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: -1;
+  transition: all 250ms ease-in-out;
+}
+
+.after {
+  transform: translate(-2.5%, 2.5%);
+  background-color: var(--pink);
+}
+
+.before {
+  transform: translate(2.5%, -2.5%);
+  background-color: var(--cyan);
+}
+
+.social:hover .after {
+  transform: translate(2.5%, -2.5%);
+  opacity: 1;
+}
+.social:hover .before {
+  transform: translate(-2.5%, 2.5%);
+  opacity: 1;
+}
+
+.social > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.alert {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--cyan);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}

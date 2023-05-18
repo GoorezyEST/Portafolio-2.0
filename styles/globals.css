@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+  background-color: var(--black-main);
+}
+
+:root {
+  --black-main: rgb(10, 10, 10);
+  --white-main: rgb(235, 235, 235);
+  --white-secondary: rgb(215, 215, 215);
+  --black-secondary: rgb(20, 20, 20);
+  --cyan: #df5b20;
+  --cyan-dark: #df5b20;
+  --pink: #20a4df;
+  --pink-transparent: #20a4df40;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+p::selection {
+  background-color: var(--pink-transparent);
+}
