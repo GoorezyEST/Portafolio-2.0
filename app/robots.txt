@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://franco-espinosa-portafolio.vercel.app/sitemap.xml

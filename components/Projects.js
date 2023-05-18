@@ -85,7 +85,7 @@ export default function Projects() {
                     <div className={styles.img_loading}>
                       <span className={styles.loader}></span>
                     </div>
-                    <Image src={item.image} alt={item.alt} fill />
+                    <Image src={item.image} alt={item.alt} fill sizes="400px" />
                   </motion.div>
                   <motion.div
                     className={styles.accent}
@@ -172,7 +172,7 @@ export default function Projects() {
                     <div className={styles.img_loading}>
                       <span className={styles.loader}></span>
                     </div>
-                    <Image src={item.image} alt={item.alt} fill />
+                    <Image src={item.image} alt={item.alt} fill sizes="80vw" />
                   </motion.div>
                   <motion.div
                     className={styles.phone_title}
