@@ -18,7 +18,7 @@ export default function Footer() {
       </svg>
 
       <div className={styles.text}>
-        <p>Ponte en contacto:</p>
+        <h2>Ponte en contacto:</h2>
         <p>francoespinosa.dev@gmail.com</p>
         <p>+54 9 223 522-8237</p>
         <p

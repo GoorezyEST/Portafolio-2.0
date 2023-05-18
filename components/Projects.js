@@ -117,7 +117,7 @@ export default function Projects() {
                       delay: 0.25,
                     }}
                   >
-                    <h4>0{index + 1}</h4>
+                    <p>0{index + 1}</p>
                   </motion.div>
                   <motion.div
                     className={styles.title}
@@ -157,7 +157,7 @@ export default function Projects() {
                       delay: 0.25,
                     }}
                   >
-                    <h4>0{index + 1}</h4>
+                    <p>0{index + 1}</p>
                   </motion.div>
                   <motion.div
                     className={styles.phone_image}
