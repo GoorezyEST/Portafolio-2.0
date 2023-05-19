@@ -63,13 +63,6 @@ export default function Projects() {
           end: "3500 top",
           scrub: 0.75,
           pin: true,
-          snap: {
-            snapTo: 1 / (projectsRef.current.length - 1),
-            duration: 0.25,
-            ease: "sine",
-            delay: 0.35,
-            directional: false,
-          },
         },
       }
     );
