@@ -4,9 +4,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function SecondPage() {
-  const frameRef = useRef(null);
-  const triggerRef = useRef(null);
-
   const sectionOneTrigger = useRef(null);
   const sectionOneLine = useRef(null);
   const sectionOneTitle = useRef(null);
@@ -23,51 +20,36 @@ export default function SecondPage() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const anim = gsap.to(frameRef.current, {
-      scrollTrigger: {
-        start: "top top",
-        trigger: triggerRef.current,
-        pin: true,
-        scrub: 1,
-      },
-      width: "101%",
-      height: "101%",
-      borderRadius: "0px",
-    });
-
-    return () => anim.kill();
-  }, []);
-
-  useEffect(() => {
     const tlOneCtx = gsap.context(() => {
       gsap
         .timeline({
           scrollTrigger: {
             trigger: sectionOneTrigger.current,
-            start: "center center",
-            pin: true,
-            pinSpacing: true,
-            scrub: 0.5,
+            start: "center 75%",
+            end: "bottom 50%",
+            toggleActions: "play reverse play reverse",
           },
         })
         .from(sectionOneLine.current, {
           height: "0px",
-          duration: 3.25,
+          duration: 0.2,
         })
         .from(sectionOneSVG.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
+          delay: 0.1,
         })
         .from(sectionOneTitle.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
+          delay: 0.1,
         })
         .from(sectionOneText.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
         });
     });
 
@@ -80,35 +62,36 @@ export default function SecondPage() {
         .timeline({
           scrollTrigger: {
             trigger: sectionTwoTrigger.current,
-            start: "center center",
-            pin: true,
-            pinSpacing: true,
-            scrub: 0.5,
+            start: "center 75%",
+            end: "bottom 50%",
+            toggleActions: "play reverse play reverse",
           },
         })
         .from(sectionTwoLine.current, {
           height: "0px",
-          duration: 3.25,
+          duration: 0.2,
         })
         .from(sectionTwoSVG.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
+          delay: 0.1,
         })
         .from(sectionTwoTitle.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
+          delay: 0.1,
         })
         .from(sectionTwoText.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
         })
         .from(sectionTwoSkills.current, {
           opacity: 0,
           x: 100,
-          duration: 3.25,
+          duration: 0.2,
         });
     });
 
@@ -117,46 +100,6 @@ export default function SecondPage() {
 
   return (
     <div className={styles.main_container}>
-      <div className={styles.transition_container} ref={triggerRef}>
-        <div className={styles.transition} ref={frameRef}>
-          <svg
-            width="594"
-            height="93"
-            viewBox="0 0 594 93"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M37.216 92.896C26.72 92.896 18.1013 90.4213 11.36 85.472C4.61865 80.4373 0.991981 73.2693 0.47998 63.968H27.232C27.488 67.1253 28.4266 69.4293 30.048 70.88C31.6693 72.3307 33.76 73.056 36.32 73.056C38.624 73.056 40.5013 72.5013 41.952 71.392C43.488 70.1973 44.256 68.576 44.256 66.528C44.256 63.8827 43.0186 61.8347 40.544 60.384C38.0693 58.9333 34.0586 57.312 28.512 55.52C22.624 53.5573 17.8453 51.68 14.176 49.888C10.592 48.0107 7.43465 45.3227 4.70398 41.824C2.05865 38.24 0.735981 33.5893 0.735981 27.872C0.735981 22.0693 2.18665 17.12 5.08798 13.024C7.98931 8.84266 12 5.68532 17.12 3.55199C22.24 1.41866 28.0426 0.35199 34.528 0.35199C45.024 0.35199 53.3867 2.82665 59.616 7.77599C65.9307 12.64 69.3013 19.5093 69.728 28.384H42.464C42.3786 25.6533 41.5253 23.6053 39.904 22.24C38.368 20.8747 36.3626 20.192 33.888 20.192C32.0106 20.192 30.4747 20.7467 29.28 21.856C28.0853 22.9653 27.488 24.544 27.488 26.592C27.488 28.2987 28.128 29.792 29.408 31.072C30.7733 32.2667 32.4373 33.3333 34.4 34.272C36.3626 35.1253 39.264 36.2347 43.104 37.6C48.8213 39.5627 53.5147 41.5253 57.184 43.488C60.9386 45.3653 64.1386 48.0533 66.784 51.552C69.5146 54.9653 70.88 59.3173 70.88 64.608C70.88 69.984 69.5146 74.8053 66.784 79.072C64.1386 83.3387 60.256 86.7093 55.136 89.184C50.1013 91.6587 44.128 92.896 37.216 92.896Z"
-              fill="var(--pink)"
-            />
-            <path
-              d="M125.807 92.896C117.359 92.896 109.594 90.9333 102.511 87.008C95.4283 82.9973 89.7963 77.4933 85.615 70.496C81.519 63.4133 79.471 55.4347 79.471 46.56C79.471 37.6853 81.519 29.7493 85.615 22.752C89.7963 15.6693 95.4283 10.1653 102.511 6.23999C109.594 2.31466 117.359 0.35199 125.807 0.35199C134.34 0.35199 142.106 2.31466 149.103 6.23999C156.186 10.1653 161.775 15.6693 165.871 22.752C169.967 29.7493 172.015 37.6853 172.015 46.56C172.015 55.4347 169.967 63.4133 165.871 70.496C161.775 77.4933 156.186 82.9973 149.103 87.008C142.02 90.9333 134.255 92.896 125.807 92.896ZM125.807 69.6C132.207 69.6 137.242 67.5093 140.911 63.328C144.666 59.1467 146.543 53.5573 146.543 46.56C146.543 39.392 144.666 33.76 140.911 29.664C137.242 25.4827 132.207 23.392 125.807 23.392C119.322 23.392 114.244 25.4827 110.575 29.664C106.906 33.76 105.071 39.392 105.071 46.56C105.071 53.6427 106.906 59.2747 110.575 63.456C114.244 67.552 119.322 69.6 125.807 69.6Z"
-              fill="var(--pink)"
-            />
-            <path
-              d="M240.893 45.664C246.184 46.8587 250.365 49.504 253.437 53.6C256.594 57.6107 258.173 62.2187 258.173 67.424C258.173 75.104 255.528 81.12 250.237 85.472C244.946 89.824 237.522 92 227.965 92H183.293V1.75999H226.557C235.773 1.75999 242.984 3.80799 248.189 7.90399C253.48 12 256.125 17.76 256.125 25.184C256.125 30.4747 254.717 34.912 251.901 38.496C249.17 41.9947 245.501 44.384 240.893 45.664ZM208.381 37.6H221.053C227.368 37.6 230.525 34.9973 230.525 29.792C230.525 24.416 227.368 21.728 221.053 21.728H208.381V37.6ZM222.973 71.776C229.288 71.776 232.445 69.1307 232.445 63.84C232.445 61.1093 231.592 59.0187 229.885 57.568C228.264 56.1173 225.917 55.392 222.845 55.392H208.381V71.776H222.973Z"
-              fill="var(--pink)"
-            />
-            <path
-              d="M314.864 92L296.944 58.72H294.256V92H269.168V1.75999H308.72C315.973 1.75999 322.117 3.03999 327.152 5.59999C332.187 8.07466 335.984 11.5307 338.544 15.968C341.104 20.32 342.384 25.2267 342.384 30.688C342.384 36.832 340.677 42.2507 337.264 46.944C333.936 51.552 329.029 54.8373 322.544 56.8L342.896 92H314.864ZM294.256 41.568H306.672C310.085 41.568 312.645 40.7573 314.352 39.136C316.059 37.5147 316.912 35.168 316.912 32.096C316.912 29.1947 316.016 26.9333 314.224 25.312C312.517 23.6053 310 22.752 306.672 22.752H294.256V41.568Z"
-              fill="var(--pink)"
-            />
-            <path
-              d="M378.881 21.856V36.576H407.681V55.648H378.881V71.904H411.521V92H353.793V1.75999H411.521V21.856H378.881Z"
-              fill="var(--pink)"
-            />
-            <path
-              d="M553.762 1.75999V92H528.674V42.208L511.65 92H490.658L473.506 41.824V92H448.418V1.75999H478.754L501.41 60.384L523.554 1.75999H553.762Z"
-              fill="var(--pink)"
-            />
-            <path
-              d="M593.131 1.75999V92H568.043V1.75999H593.131Z"
-              fill="var(--pink)"
-            />
-          </svg>
-        </div>
-      </div>
       <div className={styles.page}>
         <div className={styles.container} ref={sectionOneTrigger}>
           <div className={styles.data_container}>

@@ -1,32 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "@/styles/modules/project_transition.module.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function ProjectsTransition() {
-  const frameRef = useRef(null);
-  const triggerRef = useRef(null);
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    const anim = gsap.to(frameRef.current, {
-      scrollTrigger: {
-        start: "top top",
-        trigger: triggerRef.current,
-        pin: true,
-        scrub: 1,
-      },
-      width: "25%",
-      height: "25%",
-    });
-
-    return () => anim.kill();
-  }, []);
-
   return (
-    <div className={styles.transition_container} ref={triggerRef}>
-      <div className={styles.transition} ref={frameRef}>
+    <div className={styles.transition_container}>
+      <div className={styles.transition}>
         <svg
           width="811"
           height="97"

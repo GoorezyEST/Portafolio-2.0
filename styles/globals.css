@@ -18,15 +18,15 @@ body {
 }
 
 :root {
-  --black-main: rgb(20, 20, 20);
-  --black-secondary: rgb(25, 25, 25);
-  --white-main: rgb(240, 240, 240);
-  --white-secondary: rgb(220, 220, 220);
-  --cyan: rgb(0, 120, 200);
-  --cyan-dark: rgb(0, 80, 150);
-  --cyan-dark-transparent: rgb(0, 80, 150, 0.25);
-  --pink: rgb(255, 140, 0);
-  --pink-transparent: rgba(255, 140, 0, 0.3);
+  --black-main: #1b1a28;
+  --black-secondary: #212031;
+  --white-main: #f1edff;
+  --white-secondary: #aba9bc;
+  --cyan: #00c894;
+  --cyan-dark: #00c894;
+  --cyan-dark-transparent: rgba(0, 200, 148, 0.25);
+  --pink: #00c894;
+  --pink-transparent: #f1edff44;
 }
 
 .content {
