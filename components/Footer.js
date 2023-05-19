@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styles from "@/styles/modules/footer.module.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { vollkorn } from "@/app/layout";
 
 export default function Footer() {
   return (
@@ -59,8 +58,8 @@ export default function Footer() {
       </div>
 
       <div className={styles.copyright}>
-        <p>Desarrollado por Franco Espinosa</p>
-        <p>Argentina 2023</p>
+        <p className={vollkorn.className}>Desarrollado por Franco Espinosa</p>
+        <p className={vollkorn.className}>Argentina 2023</p>
       </div>
     </section>
   );

@@ -10,6 +10,14 @@ import { data } from "@/data/projects";
 export default function Projects() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
+  const projectsRef = useRef([]);
+  projectsRef.current = [];
+
+  const addToRefs = (el) => {
+    if (el && !projectsRef.current.includes(el)) {
+      projectsRef.current.push(el);
+    }
+  };
 
   const [device, setDevice] = useState(null);
 
@@ -46,15 +54,22 @@ export default function Projects() {
         translateX: 0,
       },
       {
-        translateX: "-500vw",
+        translateX: `-${projectsRef.current.length - 1}00vw`,
         ease: "none",
-        duration: 6,
+        duration: projectsRef.current.length,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
           end: "3500 top",
           scrub: 0.75,
           pin: true,
+          snap: {
+            snapTo: 1 / (projectsRef.current.length - 1),
+            duration: 0.25,
+            ease: "sine",
+            delay: 0.35,
+            directional: false,
+          },
         },
       }
     );
@@ -71,7 +86,11 @@ export default function Projects() {
           {!device &&
             data.map((item, index) => {
               return (
-                <div className={styles.scroll_section} key={index}>
+                <div
+                  className={styles.scroll_section}
+                  key={index}
+                  ref={addToRefs}
+                >
                   <motion.div
                     className={styles.image}
                     initial={{ opacity: 0 }}
@@ -146,7 +165,7 @@ export default function Projects() {
           {device &&
             data.map((item, index) => {
               return (
-                <div className={styles.phone_scroll_section} key={index}>
+                <div className={styles.scroll_section} key={index}>
                   <motion.div
                     className={styles.phone_number}
                     initial={{ opacity: 0 }}
@@ -159,6 +178,26 @@ export default function Projects() {
                   >
                     <p>0{index + 1}</p>
                   </motion.div>
+                  <motion.div
+                    className={styles.phone_dots}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={false}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.25,
+                    }}
+                  ></motion.div>
+                  <motion.div
+                    className={styles.phone_accent}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={false}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.25,
+                    }}
+                  ></motion.div>
                   <motion.div
                     className={styles.phone_image}
                     initial={{ opacity: 0 }}

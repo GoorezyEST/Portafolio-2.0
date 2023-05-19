@@ -51,7 +51,7 @@ export default function Contact() {
 
     setTimeout(() => {
       setCopyAlert(false);
-    }, 2500);
+    }, 750);
   };
 
   const openTab = (url) => {

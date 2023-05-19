@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import styles from "@/styles/modules/second_page.module.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { vollkorn } from "@/app/layout";
 
 export default function SecondPage() {
   const frameRef = useRef(null);
@@ -161,7 +162,7 @@ export default function SecondPage() {
         <div className={styles.container} ref={sectionOneTrigger}>
           <div className={styles.data_container}>
             <div className={styles.line} ref={sectionOneLine}></div>
-            <div className={styles.text}>
+            <div className={`${styles.text} ${vollkorn.className}`}>
               <h2 ref={sectionOneTitle}>¿Quién soy?</h2>
               <p ref={sectionOneText}>
                 Mi nombre es Franco Espinosa, soy un desarrollador que aprovecha
@@ -267,7 +268,7 @@ export default function SecondPage() {
                 decisiones como los patrones de diseño.
               </p>
               <div className={styles.skills} ref={sectionTwoSkills}>
-                <div className={styles.tech}>
+                <div className={`${styles.tech} ${vollkorn.className}`}>
                   <p>Frontend:</p>
                   <div className={styles.tech_icons}>
                     <svg

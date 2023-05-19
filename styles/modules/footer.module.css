@@ -40,7 +40,7 @@
   z-index: 25;
 }
 
-.text p:nth-child(1) {
+.text h2:nth-child(1) {
   font-size: 24px;
   color: var(--pink);
   font-weight: 700;

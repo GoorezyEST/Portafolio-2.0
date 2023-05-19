@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 700px) {
   .page {
-    padding: 100px 12.5px 100px 12.5px;
+    padding: 100px 20px 100px 20px;
   }
 }
 
@@ -72,8 +72,14 @@
   gap: 16px;
 }
 
+@media screen and (orientation: portrait) {
+  .data_container {
+    gap: 8px;
+  }
+}
+
 .text > h2 {
-  font-weight: 800;
+  font-weight: 500;
   font-size: clamp(16px, 4vw, 36px);
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -83,7 +89,7 @@
 }
 
 .text > p {
-  font-weight: 600;
+  font-weight: 300;
   font-size: clamp(12px, 2vw, 18px);
   text-align: justify;
   color: var(--white-main);
@@ -126,9 +132,15 @@
   padding-bottom: 14px;
 }
 
+@media screen and (orientation: portrait) {
+  .skills {
+    padding-bottom: 7px;
+  }
+}
+
 .tech > p {
-  font-weight: 600;
-  font-size: clamp(10px, 2vw, 18px);
+  font-weight: 300;
+  font-size: clamp(12px, 2vw, 18px);
   text-align: justify;
   color: var(--white-main);
   user-select: none;
