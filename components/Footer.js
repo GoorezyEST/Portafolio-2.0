@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "@/styles/modules/footer.module.css";
-import { vollkorn } from "@/app/layout";
 
 export default function Footer() {
   return (
@@ -58,8 +57,8 @@ export default function Footer() {
       </div>
 
       <div className={styles.copyright}>
-        <p className={vollkorn.className}>Desarrollado por Franco Espinosa</p>
-        <p className={vollkorn.className}>Argentina 2023</p>
+        <p>Desarrollado por Franco Espinosa</p>
+        <p>Argentina 2023</p>
       </div>
     </section>
   );

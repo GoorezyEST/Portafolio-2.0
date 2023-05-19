@@ -1,11 +1,5 @@
 import "@/styles/globals.css";
 import { Poppins } from "next/font/google";
-import { Merriweather } from "next/font/google";
-
-export const vollkorn = Merriweather({
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-});
 
 const poppins = Poppins({
   subsets: ["latin"],
