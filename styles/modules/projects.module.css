@@ -56,7 +56,6 @@
 .image > img,
 .phone_image > img {
   object-fit: cover;
-  filter: grayscale(1);
 }
 
 .img_loading {
