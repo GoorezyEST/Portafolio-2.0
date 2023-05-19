@@ -80,165 +80,176 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className={styles.scroll_section_outer}>
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className={styles.scroll_section_inner}>
-          {!device &&
-            data.map((item, index) => {
-              return (
-                <div
-                  className={styles.scroll_section}
-                  key={index}
-                  ref={addToRefs}
+    <div>
+      {!device && (
+        <section className={styles.scroll_section_outer}>
+          <div ref={triggerRef}>
+            <div ref={sectionRef} className={styles.scroll_section_inner}>
+              {data.map((item, index) => {
+                return (
+                  <div
+                    className={styles.scroll_section}
+                    key={index}
+                    ref={addToRefs}
+                  >
+                    <motion.div
+                      className={styles.image}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={false}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.25,
+                      }}
+                    >
+                      <div className={styles.img_loading}>
+                        <span className={styles.loader}></span>
+                      </div>
+                      <Image
+                        src={item.image}
+                        alt={item.alt}
+                        fill
+                        sizes="400px"
+                      />
+                    </motion.div>
+                    <motion.div
+                      className={styles.accent}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={false}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.25,
+                      }}
+                    ></motion.div>
+                    <motion.div
+                      className={styles.dots}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={false}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.25,
+                      }}
+                    ></motion.div>
+                    <motion.div
+                      className={styles.number}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={false}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.25,
+                      }}
+                    >
+                      <p>0{index + 1}</p>
+                    </motion.div>
+                    <motion.div
+                      className={styles.title}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={false}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.25,
+                      }}
+                    >
+                      <p>{item.text}</p>
+                      <Link
+                        className={styles.button}
+                        href={item.link}
+                        target="_blank"
+                        noopener="true"
+                        noreferrer="true"
+                      >
+                        Visitar
+                      </Link>
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+      {device && (
+        <section>
+          {data.map((item, index) => {
+            return (
+              <div className={styles.phone_section} key={index}>
+                <motion.div
+                  className={styles.phone_number}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={false}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.25,
+                  }}
                 >
-                  <motion.div
-                    className={styles.image}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
+                  <p>0{index + 1}</p>
+                </motion.div>
+                <motion.div
+                  className={styles.phone_dots}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={false}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.25,
+                  }}
+                ></motion.div>
+                <motion.div
+                  className={styles.phone_accent}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={false}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.25,
+                  }}
+                ></motion.div>
+                <motion.div
+                  className={styles.phone_image}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={false}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.25,
+                  }}
+                >
+                  <div className={styles.img_loading}>
+                    <span className={styles.loader}></span>
+                  </div>
+                  <Image src={item.image} alt={item.alt} fill sizes="80vw" />
+                </motion.div>
+                <motion.div
+                  className={styles.phone_title}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={false}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.25,
+                  }}
+                >
+                  <p>{item.text}</p>
+                  <Link
+                    className={styles.phone_button}
+                    href={item.link}
+                    target="_blank"
+                    noopener="true"
+                    noreferrer="true"
                   >
-                    <div className={styles.img_loading}>
-                      <span className={styles.loader}></span>
-                    </div>
-                    <Image src={item.image} alt={item.alt} fill sizes="400px" />
-                  </motion.div>
-                  <motion.div
-                    className={styles.accent}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  ></motion.div>
-                  <motion.div
-                    className={styles.dots}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  ></motion.div>
-                  <motion.div
-                    className={styles.number}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  >
-                    <p>0{index + 1}</p>
-                  </motion.div>
-                  <motion.div
-                    className={styles.title}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  >
-                    <p>{item.text}</p>
-                    <Link
-                      className={styles.button}
-                      href={item.link}
-                      target="_blank"
-                      noopener="true"
-                      noreferrer="true"
-                    >
-                      Visitar
-                    </Link>
-                  </motion.div>
-                </div>
-              );
-            })}
-          {device &&
-            data.map((item, index) => {
-              return (
-                <div className={styles.scroll_section} key={index}>
-                  <motion.div
-                    className={styles.phone_number}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  >
-                    <p>0{index + 1}</p>
-                  </motion.div>
-                  <motion.div
-                    className={styles.phone_dots}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  ></motion.div>
-                  <motion.div
-                    className={styles.phone_accent}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  ></motion.div>
-                  <motion.div
-                    className={styles.phone_image}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  >
-                    <div className={styles.img_loading}>
-                      <span className={styles.loader}></span>
-                    </div>
-                    <Image src={item.image} alt={item.alt} fill sizes="80vw" />
-                  </motion.div>
-                  <motion.div
-                    className={styles.phone_title}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={false}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.25,
-                    }}
-                  >
-                    <p>{item.text}</p>
-                    <Link
-                      className={styles.phone_button}
-                      href={item.link}
-                      target="_blank"
-                      noopener="true"
-                      noreferrer="true"
-                    >
-                      Visitar
-                    </Link>
-                  </motion.div>
-                </div>
-              );
-            })}
-        </div>
-      </div>
-    </section>
+                    Visitar
+                  </Link>
+                </motion.div>
+              </div>
+            );
+          })}
+        </section>
+      )}
+    </div>
   );
 }
