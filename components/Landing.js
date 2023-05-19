@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "@/styles/modules/landing.module.css";
-import { motion } from "framer-motion";
 
 export default function Landing() {
   return (
     <div className={styles.container}>
-      <motion.div className={styles.logo}>
+      <div className={styles.dots_top}></div>
+      <div className={styles.dots_bottom}></div>
+      <div className={styles.logo}>
         <svg
           width="84"
           height="80"
@@ -78,8 +79,8 @@ export default function Landing() {
             fill="var(--white-main)"
           />
         </svg>
-      </motion.div>
-      <motion.div className={styles.welcome}>
+      </div>
+      <div className={styles.welcome}>
         <svg
           width="908"
           height="169"
@@ -180,9 +181,9 @@ export default function Landing() {
             fill="var(--white-main)"
           />
         </svg>
-      </motion.div>
+      </div>
 
-      <motion.div className={styles.explore}>
+      <div className={styles.explore}>
         <svg
           width="181"
           height="62"
@@ -191,8 +192,8 @@ export default function Landing() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M98.6603 47L90 62L81.3398 47L88.5 47V37H91.5V47H98.6603Z"
             fill="var(--white-main)"
           />
@@ -241,7 +242,7 @@ export default function Landing() {
             fill="var(--white-main)"
           />
         </svg>
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .logo {
@@ -33,4 +34,50 @@
 .explore > svg {
   width: 100%;
   height: 100%;
+}
+
+.dots_top,
+.dots_bottom {
+  width: 12.5%;
+  height: 25%;
+  position: absolute;
+  z-index: -1;
+  background-image: radial-gradient(rgb(0, 200, 148, 0.5) 10%, transparent 14%),
+    radial-gradient(rgb(0, 200, 148, 0.5) 10%, transparent 14%);
+  background-position: 0px 0px, 8px 8px;
+  background-size: 16px 16px;
+  background-color: transparent;
+}
+
+.dots_top {
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 0% 100%);
+}
+
+.dots_bottom {
+  top: 0;
+  right: 0;
+  clip-path: polygon(100% 100%, 100% 0, 0 0, 50% 50%);
+}
+
+@media screen and (orientation: portrait) {
+  .container {
+    justify-content: center;
+  }
+  .logo {
+    height: 50%;
+    width: 50%;
+  }
+  .welcome {
+    display: none;
+  }
+  .explore {
+    width: 50%;
+  }
+  .dots_top,
+  .dots_bottom {
+    width: 25%;
+    height: 12.5%;
+  }
 }

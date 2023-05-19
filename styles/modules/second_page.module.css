@@ -9,13 +9,18 @@
   padding: 50px;
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 100px;
   background-color: var(--black-main);
 }
 
 @media screen and (max-width: 700px) {
   .page {
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
+  }
+}
+@media screen and (orientation: portrait) {
+  .page {
+    gap: 50px;
   }
 }
 
@@ -74,6 +79,15 @@
   width: 15px;
   height: 100%;
   background-color: var(--pink);
+}
+
+@media screen and (orientation: portrait) {
+  .line {
+    display: none;
+  }
+  .text > h2 {
+    color: var(--pink);
+  }
 }
 
 .svg_container {

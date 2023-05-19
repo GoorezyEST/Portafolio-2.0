@@ -5,24 +5,106 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px;
+  position: relative;
 }
 
 .transition {
   width: 100%;
   height: 100%;
   background-color: var(--black-main);
-  padding: 0 42px;
-  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.transition > svg {
+.title {
+  width: 50%;
+  height: 50%;
+  z-index: 25;
+}
+
+.title > svg {
   width: 100%;
   height: 100%;
 }
 
+.triangle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 25;
+}
+
+.triangle > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
+.dots_center,
+.dots_left,
+.dots_right {
+  width: 75px;
+  height: 75px;
+  background-image: radial-gradient(rgb(0, 200, 148, 0.5) 10%, transparent 14%),
+    radial-gradient(rgb(0, 200, 148, 0.5) 10%, transparent 14%);
+  background-position: 0px 0px, 8px 8px;
+  background-size: 16px 16px;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 960px) {
+  .title {
+    width: 75%;
+    height: 75%;
+    z-index: 25;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dots {
+    gap: 50px;
+  }
+  .dots_center,
+  .dots_left,
+  .dots_right {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 @media screen and (orientation: portrait) {
-  .transition {
-    transform: rotate(90deg);
-    padding: 0;
+  .dots {
+    gap: 20px;
+  }
+  .dots_center,
+  .dots_left,
+  .dots_right {
+    width: 40px;
+    height: 40px;
+  }
+  .title {
+    width: 90%;
+    height: 90%;
+    z-index: 25;
+  }
+  .triangle {
+    width: 30px;
+    height: 30px;
   }
 }
