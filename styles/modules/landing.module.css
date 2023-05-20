@@ -75,10 +75,6 @@
   }
   .explore {
     width: 25%;
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
   }
   .dots_top,
   .dots_bottom {

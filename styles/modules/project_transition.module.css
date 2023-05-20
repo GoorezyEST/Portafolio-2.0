@@ -92,7 +92,7 @@
   .transition_container {
     width: 100%;
     height: auto;
-    padding: 150px 50px 100px 50px;
+    padding: 80px 50px 0 50px;
   }
   .transition {
     flex-direction: column;

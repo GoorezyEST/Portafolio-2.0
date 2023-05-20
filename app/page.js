@@ -28,6 +28,16 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
+  useEffect(() => {
+    const orientationBool = screen.orientation.type.startsWith("landscape")
+      ? "landscape"
+      : "portrait";
+
+    screen.orientation.lock(orientationBool).catch((error) => {
+      console.log(error);
+    });
+  }, []);
+
   return (
     <GlobalProvider>
       <div className="content">
