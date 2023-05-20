@@ -159,7 +159,7 @@ export default function ProjectsTransition() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={false}
               transition={{
-                duration: 0.25,
+                duration: 0.5,
                 delay: 0.25,
               }}
             >
@@ -173,7 +173,7 @@ export default function ProjectsTransition() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={false}
               transition={{
-                duration: 0.25,
+                duration: 0.5,
                 delay: 0.25,
               }}
             >
@@ -256,7 +256,7 @@ export default function ProjectsTransition() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={false}
               transition={{
-                duration: 0.25,
+                duration: 0.5,
                 delay: 0.25,
               }}
             >

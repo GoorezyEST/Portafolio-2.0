@@ -793,7 +793,7 @@ export default function SecondPage() {
               whileInView={{ opacity: 1 }}
               viewport={false}
               transition={{
-                duration: 0.25,
+                duration: 0.5,
                 delay: 0.25,
               }}
             >
@@ -831,7 +831,7 @@ export default function SecondPage() {
               whileInView={{ opacity: 1 }}
               viewport={false}
               transition={{
-                duration: 0.25,
+                duration: 0.5,
                 delay: 0.25,
               }}
             >
