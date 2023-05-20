@@ -42,8 +42,11 @@
   height: 25%;
   position: absolute;
   z-index: -1;
-  background-image: radial-gradient(rgb(0, 200, 148, 0.5) 10%, transparent 14%),
-    radial-gradient(rgb(0, 200, 148, 0.5) 10%, transparent 14%);
+  background-image: radial-gradient(
+      var(--cyan-dark-dotted) 10%,
+      transparent 14%
+    ),
+    radial-gradient(var(--cyan-dark-dotted) 10%, transparent 14%);
   background-position: 0px 0px, 8px 8px;
   background-size: 16px 16px;
   background-color: transparent;

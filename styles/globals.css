@@ -18,15 +18,17 @@ body {
 }
 
 :root {
-  --black-main: #1b1a28;
-  --black-secondary: #212031;
-  --white-main: #f1edff;
-  --white-secondary: #aba9bc;
-  --cyan: #00c894;
-  --cyan-dark: #00c894;
-  --cyan-dark-transparent: rgba(0, 200, 148, 0.25);
-  --pink: #00c894;
-  --pink-transparent: #f1edff44;
+  --black-main: #1a1a1d;
+  --black-secondary: #1d1d20;
+  --white-main: #fcfcfc;
+  --white-secondary: #fafafa;
+  --cyan: #c3073f;
+  --cyan-dark: #c3073f;
+  --cyan-dark-transparent: rgba(195, 7, 63, 0.25);
+  --cyan-dark-dotted: rgba(195, 7, 63, 0.5);
+  --black-projects: rgba(29, 29, 32, 0.75);
+  --pink: #c3073f;
+  --pink-transparent: #fcfcfc44;
 }
 
 .content {
