@@ -9,6 +9,7 @@ import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { GlobalProvider } from "@/context/GlobalContext";
 
 export default function Home() {
   useEffect(() => {
@@ -28,14 +29,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="content">
-      <Landing />
-      <Slogan />
-      <SecondPage />
-      <ProjectsTransition />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <GlobalProvider>
+      <div className="content">
+        <Landing />
+        <Slogan />
+        <SecondPage />
+        <ProjectsTransition />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </GlobalProvider>
   );
 }

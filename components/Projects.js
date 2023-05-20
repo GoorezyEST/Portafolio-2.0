@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { motion } from "framer-motion";
@@ -6,11 +6,13 @@ import styles from "@/styles/modules/projects.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { data } from "@/data/projects";
+import { useGlobal } from "@/context/GlobalContext";
 
 export default function Projects() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
   const projectsRef = useRef([]);
+  const { device } = useGlobal();
   projectsRef.current = [];
 
   const addToRefs = (el) => {
@@ -18,32 +20,6 @@ export default function Projects() {
       projectsRef.current.push(el);
     }
   };
-
-  const [device, setDevice] = useState(null);
-
-  useEffect(() => {
-    const handleOrientationChange = (event) => {
-      // Check if orientation is portrait
-      if (event.matches) {
-        setDevice(true);
-      } else {
-        setDevice(false);
-      }
-    };
-
-    // Check if the window object is available (client-side rendering)
-    if (typeof window !== "undefined") {
-      const portrait = window.matchMedia("(orientation: portrait)");
-      setDevice(portrait.matches); // Set initial value based on current orientation
-
-      portrait.addEventListener("change", handleOrientationChange);
-
-      return () => {
-        // Clean up the event listener when the component unmounts
-        portrait.removeEventListener("change", handleOrientationChange);
-      };
-    }
-  }, []);
 
   gsap.registerPlugin(ScrollTrigger);
 

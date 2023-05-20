@@ -9,6 +9,18 @@
   gap: 75px;
 }
 
+.phone_container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 75px 0px;
+  gap: 75px;
+}
+
 .svg_container {
   width: 30%;
   height: max-content;
@@ -81,22 +93,4 @@
 .social > svg {
   width: 100%;
   height: 100%;
-}
-
-.alert {
-  position: fixed;
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: var(--cyan);
-  color: var(--black-main);
-  font-weight: 600;
-  font-size: 16px;
-  padding: 12px 24px;
-  white-space: nowrap;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
 }

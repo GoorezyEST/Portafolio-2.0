@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/modules/footer.module.css";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
@@ -15,7 +16,16 @@ export default function Footer() {
         ></path>
       </svg>
 
-      <div className={styles.text}>
+      <motion.div
+        className={styles.text}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={false}
+        transition={{
+          duration: 0.25,
+          delay: 0.25,
+        }}
+      >
         <h2>Ponte en contacto:</h2>
         <p>francoespinosa.dev@gmail.com</p>
         <p>+54 9 223 522-8237</p>
@@ -30,9 +40,18 @@ export default function Footer() {
           LinkedIn
         </p>
         <p>Argentina, Mar del Plata</p>
-      </div>
+      </motion.div>
 
-      <div className={styles.logo}>
+      <motion.div
+        className={styles.logo}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={false}
+        transition={{
+          duration: 0.25,
+          delay: 0.25,
+        }}
+      >
         <svg
           width="270"
           height="266"
@@ -54,12 +73,21 @@ export default function Footer() {
             fill="white"
           />
         </svg>
-      </div>
+      </motion.div>
 
-      <div className={styles.copyright}>
+      <motion.div
+        className={styles.copyright}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={false}
+        transition={{
+          duration: 0.25,
+          delay: 0.25,
+        }}
+      >
         <p>Desarrollado por Franco Espinosa</p>
         <p>Argentina 2023</p>
-      </div>
+      </motion.div>
     </section>
   );
 }

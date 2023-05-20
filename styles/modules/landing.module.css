@@ -64,6 +64,7 @@
 @media screen and (orientation: portrait) {
   .container {
     justify-content: center;
+    align-items: center;
   }
   .logo {
     height: 50%;
@@ -73,7 +74,11 @@
     display: none;
   }
   .explore {
-    width: 50%;
+    width: 25%;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .dots_top,
   .dots_bottom {
