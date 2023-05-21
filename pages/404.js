@@ -37,8 +37,8 @@ export default function Custom404() {
         <p>
           Perdón, pero parece que algo sospechoso está ocurriendo.
           <br />
-          Sea lo que sea ese tal "Error 404", no tengo la menor idea, pero uno
-          ha ocurrido.
+          Sea lo que sea ese tal &quot;Error 404&quot;, no tengo la menor idea,
+          pero uno ha ocurrido.
           <br />
           <br />
           ¿Quieres que te saque de este aprieto?
