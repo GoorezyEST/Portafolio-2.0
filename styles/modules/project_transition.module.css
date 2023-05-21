@@ -71,6 +71,38 @@
   background-color: transparent;
 }
 
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .triangle {
+    width: 75px;
+    height: 75px;
+  }
+  .dots {
+    gap: 100px;
+  }
+  .dots_center,
+  .dots_left,
+  .dots_right {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .triangle {
+    width: 85px;
+    height: 85px;
+  }
+  .dots {
+    gap: 125px;
+  }
+  .dots_center,
+  .dots_left,
+  .dots_right {
+    width: 125px;
+    height: 125px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .title {
     width: 75%;
