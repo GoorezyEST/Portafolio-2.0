@@ -56,6 +56,7 @@
 .image > img,
 .phone_image > img {
   object-fit: cover;
+  filter: grayscale(1);
 }
 
 .img_loading {
@@ -253,6 +254,78 @@
   transform: translateX(-50%);
   z-index: 25;
   background-color: var(--cyan-dark-transparent);
+}
+
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .image {
+    width: 500px;
+    height: 500px;
+  }
+  .number {
+    font-size: 312px;
+  }
+  .accent,
+  .dots {
+    width: 400px;
+    height: 400px;
+  }
+  .title {
+    width: 350px;
+  }
+  .title > p {
+    font-size: 32px;
+    font-weight: 500;
+    padding: 8px 16px;
+  }
+
+  .button {
+    width: 150px;
+    background-color: var(--white-main);
+    padding: 8px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--black-main);
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .image {
+    width: 600px;
+    height: 600px;
+  }
+  .number {
+    font-size: 382px;
+  }
+  .accent,
+  .dots {
+    width: 500px;
+    height: 500px;
+  }
+  .title {
+    width: 450px;
+  }
+  .title > p {
+    font-size: 42px;
+    font-weight: 500;
+    padding: 8px 16px;
+  }
+
+  .button {
+    width: 200px;
+    background-color: var(--white-main);
+    padding: 8px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--black-main);
+  }
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
