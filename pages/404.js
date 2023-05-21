@@ -45,8 +45,8 @@ export default function Custom404() {
         </p>
       </div>
       <div className={styles.links}>
-        <Link href={"./"}>Si, por favor</Link>
-        <Link href={"./"}>Si, gracias</Link>
+        <Link href="./">Si, por favor</Link>
+        <Link href="./">Si, gracias</Link>
       </div>
     </div>
   );
