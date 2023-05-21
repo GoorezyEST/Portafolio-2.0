@@ -7,7 +7,6 @@ import SecondPage from "@/components/SecondPage";
 import ProjectsTransition from "@/components/ProjectsTransition";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { GlobalProvider } from "@/context/GlobalContext";
 
@@ -36,7 +35,6 @@ export default function Home() {
         <SecondPage />
         <ProjectsTransition />
         <Projects />
-        <Contact />
         <Footer />
       </div>
     </GlobalProvider>
