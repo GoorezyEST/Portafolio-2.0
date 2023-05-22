@@ -2,6 +2,7 @@
   height: 100vh;
   width: 100%;
   background-color: var(--black-secondary);
+  transition: all 300ms ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +79,7 @@
   left: 0;
   transform: rotate(180deg);
   fill: var(--black-main);
+  transition: all 300ms ease-in;
   height: 65%;
   z-index: 5;
 }
