@@ -59,7 +59,7 @@ body {
 
 .fixed-container {
   position: fixed;
-  top: -7.5%;
+  top: -49px;
   left: 50%;
   transform: translateX(-50%);
   width: 70px;
