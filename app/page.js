@@ -6,10 +6,11 @@ import Projects from "@/components/Projects";
 import SecondPage from "@/components/SecondPage";
 import ProjectsTransition from "@/components/ProjectsTransition";
 import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer";
 import { GlobalProvider } from "@/context/GlobalContext";
 import Preferences from "@/components/Preferences";
+import { gsap } from "gsap";
 
 export default function Home() {
   useEffect(() => {
@@ -31,12 +32,14 @@ export default function Home() {
   return (
     <GlobalProvider>
       <div className="content">
+        <div className="fixed-container" aria-haspopup="true">
+          <Preferences />
+        </div>
         <Landing />
         <Slogan />
         <SecondPage />
         <ProjectsTransition />
         <Projects />
-        <Preferences />
         <Footer />
       </div>
     </GlobalProvider>
