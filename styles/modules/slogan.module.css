@@ -14,7 +14,7 @@
   font-weight: 800;
   font-size: clamp(3rem, 10vw, 15rem);
   line-height: clamp(5rem, 12vw, 17rem);
-  color: var(--black-secondary);
+  color: transparent;
   cursor: default;
   user-select: none;
 }
