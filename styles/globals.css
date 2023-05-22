@@ -29,6 +29,26 @@ body {
   --black-projects: rgba(29, 29, 32, 0.75);
   --pink: #c3073f;
   --pink-transparent: #fcfcfc44;
+  --slogan-stroke: rgba(255, 255, 255, 0.15);
+  --project-number: rgba(235, 235, 235, 0.5);
+  --project-dots: rgb(255, 255, 255, 0.5);
+}
+
+.light-theme {
+  --black-main: rgb(230, 230, 230);
+  --black-secondary: rgb(222, 222, 222);
+  --white-main: rgb(40, 40, 40);
+  --white-secondary: rgb(40, 40, 40);
+  --cyan: #0460ec;
+  --cyan-dark: #0460ec;
+  --cyan-dark-transparent: rgba(4, 96, 236, 0.25);
+  --cyan-dark-dotted: rgba(4, 96, 236, 0.5);
+  --black-projects: rgba(235, 235, 235, 0.5);
+  --pink: #0460ec;
+  --pink-transparent: rgba(40, 40, 40, 0.3);
+  --slogan-stroke: rgba(40, 40, 40, 0.5);
+  --project-number: rgba(40, 40, 40, 0.5);
+  --project-dots: rgb(40, 40, 40, 0.5);
 }
 
 .content {
