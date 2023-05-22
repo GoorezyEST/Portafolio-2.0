@@ -9,6 +9,7 @@ import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import { GlobalProvider } from "@/context/GlobalContext";
+import Preferences from "@/components/Preferences";
 
 export default function Home() {
   useEffect(() => {
@@ -35,6 +36,7 @@ export default function Home() {
         <SecondPage />
         <ProjectsTransition />
         <Projects />
+        <Preferences />
         <Footer />
       </div>
     </GlobalProvider>
