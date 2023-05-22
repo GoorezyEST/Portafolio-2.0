@@ -29,32 +29,50 @@ body {
   --black-projects: rgba(29, 29, 32, 0.75);
   --pink: #c3073f;
   --pink-transparent: #fcfcfc44;
-  --slogan-stroke: rgba(255, 255, 255, 0.15);
+  --slogan-stroke: rgba(255, 255, 255, 0.05);
   --project-number: rgba(235, 235, 235, 0.5);
   --project-dots: rgb(255, 255, 255, 0.5);
 }
 
 .light-theme {
-  --black-main: rgb(230, 230, 230);
-  --black-secondary: rgb(222, 222, 222);
-  --white-main: rgb(40, 40, 40);
-  --white-secondary: rgb(40, 40, 40);
-  --cyan: #0460ec;
-  --cyan-dark: #0460ec;
-  --cyan-dark-transparent: rgba(4, 96, 236, 0.25);
-  --cyan-dark-dotted: rgba(4, 96, 236, 0.5);
-  --black-projects: rgba(235, 235, 235, 0.5);
-  --pink: #0460ec;
-  --pink-transparent: rgba(40, 40, 40, 0.3);
-  --slogan-stroke: rgba(40, 40, 40, 0.5);
-  --project-number: rgba(40, 40, 40, 0.5);
-  --project-dots: rgb(40, 40, 40, 0.5);
+  --black-main: #e6e0e0;
+  --black-secondary: hsl(0, 11%, 86%);
+  --white-main: #393535;
+  --white-secondary: #393535;
+  --cyan: #009193;
+  --cyan-dark: #009193;
+  --cyan-dark-transparent: rgba(0, 145, 147, 0.25);
+  --cyan-dark-dotted: rgba(0, 145, 147, 0.5);
+  --black-projects: rgba(230, 224, 224, 0.5);
+  --pink: #009193;
+  --pink-transparent: rgba(57, 53, 53, 0.3);
+  --slogan-stroke: rgba(57, 53, 53, 0.25);
+  --project-number: rgba(57, 53, 53, 0.5);
+  --project-dots: rgb(57, 53, 53, 0.5);
 }
 
 .content {
   width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.fixed-container {
+  position: fixed;
+  top: -7.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
   height: auto;
   overflow: hidden;
+  transition: all 350ms ease-in-out;
+  z-index: 1000;
+}
+
+.fixed-container:hover,
+.fixed-container:focus,
+.fixed-container:active {
+  top: 0;
 }
 
 p::selection {
