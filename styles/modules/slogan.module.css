@@ -21,7 +21,7 @@
 
 @supports (-webkit-text-stroke: 1px black) {
   .reveal_text {
-    -webkit-text-stroke: 1px rgba(235, 235, 235, 0.05);
+    -webkit-text-stroke: 1px var(--slogan-stroke);
   }
 }
 
