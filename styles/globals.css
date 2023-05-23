@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: background-color 300ms ease-in;
 }
 
 body::-webkit-scrollbar {
@@ -25,10 +26,10 @@ body {
   --cyan: #c3073f;
   --cyan-dark: #c3073f;
   --cyan-dark-transparent: rgba(195, 7, 63, 0.25);
-  --cyan-dark-dotted: rgba(195, 7, 63, 0.5);
+  --cyan-dark-dotted: rgba(195, 7, 63, 0.85);
   --black-projects: rgba(29, 29, 32, 0.75);
   --pink: #c3073f;
-  --pink-transparent: #fcfcfc44;
+  --pink-transparent: rgba(252, 252, 252, 0.075);
   --slogan-stroke: rgba(255, 255, 255, 0.05);
   --project-number: rgba(235, 235, 235, 0.5);
   --project-dots: rgb(255, 255, 255, 0.5);
@@ -42,10 +43,10 @@ body {
   --cyan: #009193;
   --cyan-dark: #009193;
   --cyan-dark-transparent: rgba(0, 145, 147, 0.25);
-  --cyan-dark-dotted: rgba(0, 145, 147, 0.5);
+  --cyan-dark-dotted: rgba(0, 145, 147, 0.85);
   --black-projects: rgba(230, 224, 224, 0.5);
   --pink: #009193;
-  --pink-transparent: rgba(57, 53, 53, 0.3);
+  --pink-transparent: rgba(57, 53, 53, 0.075);
   --slogan-stroke: rgba(57, 53, 53, 0.25);
   --project-number: rgba(57, 53, 53, 0.5);
   --project-dots: rgb(57, 53, 53, 0.5);
