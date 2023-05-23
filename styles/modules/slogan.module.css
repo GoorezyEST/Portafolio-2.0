@@ -28,6 +28,7 @@
 .top_svg,
 .bot_svg {
   fill: var(--black-secondary);
+  transition: fill 300ms ease-in;
 }
 
 .bot_svg {
