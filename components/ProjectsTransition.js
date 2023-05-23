@@ -1,15 +1,18 @@
 import React from "react";
 import styles from "@/styles/modules/project_transition.module.css";
 import { motion } from "framer-motion";
+import { useGlobal } from "@/context/GlobalContext";
 
 export default function ProjectsTransition() {
+  const { device } = useGlobal();
+
   return (
     <div className={styles.transition_container}>
       <div className={styles.transition}>
         <motion.div
           className={styles.dots}
-          initial={{ opacity: 0, scale: 0, x: "-50%" }}
-          whileInView={{ opacity: 1, scale: 1, x: "-50%" }}
+          initial={{ opacity: 0, scale: 0, x: device ? "0%" : "-50%" }}
+          whileInView={{ opacity: 1, scale: 1, x: device ? "0%" : "-50%" }}
           viewport={false}
           transition={{
             duration: 0.5,
