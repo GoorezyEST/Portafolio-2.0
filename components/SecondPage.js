@@ -9,13 +9,11 @@ export default function SecondPage() {
   const { device } = useGlobal();
 
   const sectionOneTrigger = useRef(null);
-  const sectionOneLine = useRef(null);
   const sectionOneTitle = useRef(null);
   const sectionOneText = useRef(null);
   const sectionOneSVG = useRef(null);
 
   const sectionTwoTrigger = useRef(null);
-  const sectionTwoLine = useRef(null);
   const sectionTwoTitle = useRef(null);
   const sectionTwoText = useRef(null);
   const sectionTwoSkills = useRef(null);
@@ -29,14 +27,10 @@ export default function SecondPage() {
         .timeline({
           scrollTrigger: {
             trigger: sectionOneTrigger.current,
-            start: "top 75%",
-            end: "bottom 50%",
+            start: "top bottom",
+            end: "bottom top",
             toggleActions: "play reverse play reverse",
           },
-        })
-        .from(sectionOneLine.current, {
-          height: "0px",
-          duration: 0.2,
         })
         .from(sectionOneSVG.current, {
           opacity: 0,
@@ -66,14 +60,10 @@ export default function SecondPage() {
         .timeline({
           scrollTrigger: {
             trigger: sectionTwoTrigger.current,
-            start: "top 75%",
-            end: "bottom 50%",
+            start: "top bottom",
+            end: "bottom top",
             toggleActions: "play reverse play reverse",
           },
-        })
-        .from(sectionTwoLine.current, {
-          height: "0px",
-          duration: 0.2,
         })
         .from(sectionTwoSVG.current, {
           opacity: 0,
@@ -109,7 +99,6 @@ export default function SecondPage() {
           <div className={styles.page}>
             <div className={styles.container} ref={sectionOneTrigger}>
               <div className={styles.data_container}>
-                <div className={styles.line} ref={sectionOneLine}></div>
                 <div className={styles.text}>
                   <h2 ref={sectionOneTitle}>Sobre mi</h2>
                   <p ref={sectionOneText}>
@@ -2562,7 +2551,6 @@ export default function SecondPage() {
               ref={sectionTwoTrigger}
             >
               <div className={styles.data_container}>
-                <div className={styles.line} ref={sectionTwoLine}></div>
                 <div className={styles.text}>
                   <h2 ref={sectionTwoTitle}>Mis habilidades</h2>
                   <p ref={sectionTwoText}>
