@@ -2,7 +2,6 @@
   height: 100vh;
   width: 100%;
   background-color: var(--black-secondary);
-  transition: all 300ms ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +78,7 @@
   left: 0;
   transform: rotate(180deg);
   fill: var(--black-main);
-  transition: all 300ms ease-in;
+  transition: fill 300ms ease-in;
   height: 65%;
   z-index: 5;
 }
@@ -191,6 +190,105 @@
     color: var(--white-main);
     opacity: 0.75;
     font-size: 24px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+  .logo > svg {
+    width: 350px;
+    height: 350px;
+  }
+
+  .text h2:nth-child(1) {
+    font-size: 48px;
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 16px;
+    cursor: default;
+    user-select: none;
+  }
+
+  .text p:nth-child(2),
+  .text p:nth-child(3),
+  .text p:nth-child(5) {
+    font-size: 36px;
+    color: var(--white-main);
+    font-weight: 500;
+    cursor: default;
+  }
+
+  .text p:nth-child(4) {
+    font-size: 36px;
+    color: var(--white-main);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .text p:nth-child(5) {
+    margin-top: 12px;
+    user-select: none;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white-main);
+    opacity: 0.75;
+    font-size: 32px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+  .logo > svg {
+    width: 400px;
+    height: 400px;
+  }
+
+  .text h2:nth-child(1) {
+    font-size: 54px;
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 16px;
+    cursor: default;
+    user-select: none;
+  }
+
+  .text p:nth-child(2),
+  .text p:nth-child(3),
+  .text p:nth-child(5) {
+    font-size: 42px;
+    color: var(--white-main);
+    font-weight: 500;
+    cursor: default;
+  }
+
+  .text p:nth-child(4) {
+    font-size: 42px;
+    color: var(--white-main);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .text p:nth-child(5) {
+    margin-top: 12px;
+    user-select: none;
+  }
+
+  .copyright {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white-main);
+    opacity: 0.75;
+    font-size: 36px;
     text-align: center;
     white-space: nowrap;
   }
