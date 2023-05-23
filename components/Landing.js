@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "@/styles/modules/landing.module.css";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Landing() {
+  const exploreMore = useRef(null);
+  const triggerRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.to(exploreMore.current, {
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "70% top",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={triggerRef}>
       <div className={styles.dots_top}></div>
       <div className={styles.dots_bottom}></div>
       <div className={styles.logo}>
@@ -183,7 +206,7 @@ export default function Landing() {
         </svg>
       </div>
 
-      <div className={styles.explore}>
+      <div className={styles.explore} ref={exploreMore}>
         <svg
           width="181"
           height="62"
