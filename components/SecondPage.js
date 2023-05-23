@@ -142,8 +142,9 @@ export default function SecondPage() {
                   viewBox="0 0 694 950"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  ref={sectionOneSVG}
                 >
-                  <g clipPath="url(#clip0_57_4079)" ref={sectionOneSVG}>
+                  <g clipPath="url(#clip0_57_4079)">
                     <path
                       d="M421 676.5C421 677.328 420.328 678 419.5 678C418.672 678 418 677.328 418 676.5C418 675.672 418.672 675 419.5 675C420.328 675 421 675.672 421 676.5Z"
                       fill="var(--white-main)"
