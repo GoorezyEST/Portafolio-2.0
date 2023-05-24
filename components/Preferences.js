@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import styles from "@/styles/modules/preferences.module.css";
 import { gsap } from "gsap";
+import { useGlobal } from "@/context/GlobalContext";
 
 export default function Preferences() {
+  const { handleThemeChange } = useGlobal();
   const sunSVG = useRef(null);
   const moonSVG = useRef(null);
   const timelineRef = useRef(null);
@@ -27,9 +29,7 @@ export default function Preferences() {
   }, []);
 
   const toggleTimelinePlayback = () => {
-    const timeline = timelineRef.current;
-    timeline.reversed(!timeline.reversed());
-    document.body.classList.toggle("light-theme");
+    handleThemeChange(timelineRef.current);
   };
 
   return (
