@@ -22,23 +22,17 @@ export function PropsLoad({ children }) {
             className="loading_container"
             initial={{ y: 0 }}
             animate={{ y: 0 }}
-            exit={{ y: "-100%" }}
+            exit={{ opacity: 0 }}
             transition={{
-              duration: 0.5,
+              duration: 0.25,
               delay: 0,
               ease: "easeOut",
             }}
           >
-            <div className="loading">
-              <div className="loading__letter">C</div>
-              <div className="loading__letter">A</div>
-              <div className="loading__letter">R</div>
-              <div className="loading__letter">G</div>
-              <div className="loading__letter">A</div>
-              <div className="loading__letter">N</div>
-              <div className="loading__letter">D</div>
-              <div className="loading__letter">O</div>
+            <div className="spinner_container">
+              <span className="spinner"></span>
             </div>
+            <span className="loading_text">Cargando</span>
           </motion.div>
         )}
       </AnimatePresence>
