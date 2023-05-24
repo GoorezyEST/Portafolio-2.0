@@ -6,13 +6,18 @@ import Projects from "@/components/Projects";
 import SecondPage from "@/components/SecondPage";
 import ProjectsTransition from "@/components/ProjectsTransition";
 import Lenis from "@studio-freight/lenis";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import Footer from "@/components/Footer";
-import { GlobalProvider } from "@/context/GlobalContext";
 import Preferences from "@/components/Preferences";
-import { gsap } from "gsap";
+import { useGlobal } from "@/context/GlobalContext";
 
 export default function Home() {
+  const { setIsHydrated } = useGlobal();
+
+  useEffect(() => {
+    setIsHydrated(false);
+  }, []);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -30,18 +35,16 @@ export default function Home() {
   }, []);
 
   return (
-    <GlobalProvider>
-      <div className="content">
-        <div className="fixed-container" aria-haspopup="true">
-          <Preferences />
-        </div>
-        <Landing />
-        <Slogan />
-        <SecondPage />
-        <ProjectsTransition />
-        <Projects />
-        <Footer />
+    <div className="content">
+      <div className="fixed-container" aria-haspopup="true">
+        <Preferences />
       </div>
-    </GlobalProvider>
+      <Landing />
+      <Slogan />
+      <SecondPage />
+      <ProjectsTransition />
+      <Projects />
+      <Footer />
+    </div>
   );
 }
