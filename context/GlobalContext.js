@@ -4,6 +4,37 @@ const GlobalContext = createContext();
 
 export function GlobalProvider({ children }) {
   const [device, setDevice] = useState(null);
+  const [isHydrated, setIsHydrated] = useState(true);
+
+  useEffect(() => {
+    const themeExists = window.localStorage.getItem("prefered-theme");
+
+    if (themeExists !== null) {
+      switch (themeExists) {
+        case "dark":
+          document.body.classList.remove("light-theme");
+          break;
+        case "light":
+          document.body.classList.add("light-theme");
+          break;
+        default:
+          document.body.classList.remove("light-theme");
+      }
+    }
+  }, []);
+
+  function handleThemeChange(timelineRef) {
+    const timeline = timelineRef;
+    timeline.reversed(!timeline.reversed());
+    document.body.classList.toggle("light-theme");
+
+    if (!document.body.classList.contains("light-theme")) {
+      window.localStorage.setItem("prefered-theme", "dark");
+    }
+    if (document.body.classList.contains("light-theme")) {
+      window.localStorage.setItem("prefered-theme", "light");
+    }
+  }
 
   useEffect(() => {
     const handleOrientationChange = (event) => {
@@ -33,6 +64,9 @@ export function GlobalProvider({ children }) {
     <GlobalContext.Provider
       value={{
         device,
+        isHydrated,
+        setIsHydrated,
+        handleThemeChange,
       }}
     >
       {children}
