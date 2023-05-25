@@ -35,4 +35,4 @@ npm run build
 1. Clona este repositorio.
 2. Ejecuta el comando _npm install_ para instalar todas las dependencias.
 3. Ejecuta el comando _npm run dev_ para compilar el proyecto en modo development.
-4. El proyecto estara en tu navegador predeterminado en la url: http://localhost:3000/
+4. El proyecto estara en tu navegador predeterminado en la url: http://localhost:3000/.
