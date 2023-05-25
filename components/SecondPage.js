@@ -102,22 +102,23 @@ export default function SecondPage() {
                 <div className={styles.text}>
                   <h2 ref={sectionOneTitle}>Sobre mi</h2>
                   <p ref={sectionOneText}>
-                    Mi nombre es Franco Espinosa, soy un desarrollador que
-                    aprovecha cada día para expandir mis conocimientos y
-                    enfrentar desafíos que pongan a prueba mis habilidades.
+                    Mi nombre es Franco Espinosa, soy un desarrollador de
+                    software. Trato de aprovechar cada día para expandir mis
+                    conocimientos y enfrentar desafíos que ponen a prueba mis
+                    habilidades.
                     <br />
                     <br />
                     Comencé a estudiar programacion en el año 2021, desde
                     entonces he completado diferentes cursos en plataformas de
-                    renombre como Udemy o FreeCodeCamp, asi como tambien he
+                    renombre como Udemy o FreeCodeCamp, asi como también he
                     desarrollado proyectos como un buscador de videojuegos
-                    gratuitos o mi blog de programación y tecnología, entre
+                    gratuitos, mi blog de programación y tecnología, entre
                     otros.
                     <br />
                     <br />
                     Soy oriundo de Argentina, más específicamente de la ciudad
                     de Mar del Plata, actualmente tengo 21 años y estoy en la
-                    búsqueda de mi primera experiencia laboral. Mientras espero
+                    búsqueda de mi primer experiencia laboral. Mientras espero
                     que esta oportunidad llegue, me encuentro trabajando con un
                     compañero en proyectos Freelance para poder expandir mi
                     habilidad profesional en el rubro.
