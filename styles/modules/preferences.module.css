@@ -1,19 +1,20 @@
 .container {
-  height: auto;
-  width: 100%;
+  height: max-content;
+  width: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   user-select: none;
   transition: all 300ms ease-in;
-  padding: 10px 0;
+  padding: 0;
+  margin: 16px 16px 0 0;
 }
 
 .theme {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: var(--pink);
   box-shadow: 0 0 4px var(--pink-transparent);
   border-radius: 50%;
@@ -25,15 +26,15 @@
 }
 
 .moon {
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   position: absolute;
 }
 
 .sun {
   position: absolute;
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   transform: scale(0);
 }
 
@@ -42,4 +43,64 @@
   width: 100%;
   height: 100%;
   fill: var(--white-main);
+}
+
+@media screen and (orientation: portrait) {
+  .container {
+    margin: 8px 8px 0 0;
+  }
+  .theme {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .container {
+    margin: 12px 12px 0 0;
+  }
+  .theme {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (min-height: 900px) {
+  .container {
+    margin: 16px 16px 0 0;
+  }
+  .theme {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .container {
+    margin: 24px 24px 0 0;
+  }
+  .theme {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
+  .container {
+    margin: 32px 32px 0 0;
+  }
+  .theme {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+  .container {
+    margin: 48px 48px 0 0;
+  }
+  .theme {
+    width: 125px;
+    height: 125px;
+  }
 }

@@ -62,20 +62,20 @@ body {
 
 .fixed-container {
   position: fixed;
-  top: -49px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
+  top: 0;
+  right: 0;
+  width: max-content;
   height: auto;
   overflow: hidden;
   transition: all 350ms ease-in-out;
   z-index: 1000;
+  opacity: 0.75;
 }
 
 .fixed-container:hover,
 .fixed-container:focus,
 .fixed-container:active {
-  top: 0;
+  opacity: 1;
 }
 
 p::selection {
