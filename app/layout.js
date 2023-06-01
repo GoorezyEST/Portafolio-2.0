@@ -27,6 +27,9 @@ export const metadata = {
     "Mar del Plata",
     "Argentina",
   ],
+  verification: {
+    google: "oGTabLT5X7vXrCB9SzgMaX3TX3Djdnh0UTh-rE5XuAI"
+  },
 };
 
 export default function RootLayout({ children }) {
