@@ -16,7 +16,7 @@ export default function ProjectsTransition() {
           viewport={false}
           transition={{
             duration: 0.5,
-            delay: 0.25,
+            delay: 0.125,
           }}
         >
           <div className={styles.dots_center}></div>
@@ -30,7 +30,7 @@ export default function ProjectsTransition() {
           viewport={false}
           transition={{
             duration: 0.5,
-            delay: 0.25,
+            delay: 0.125,
           }}
         >
           <svg
@@ -113,7 +113,7 @@ export default function ProjectsTransition() {
           viewport={false}
           transition={{
             duration: 0.5,
-            delay: 0.25,
+            delay: 0.125,
           }}
         >
           <svg
