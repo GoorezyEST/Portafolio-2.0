@@ -7,10 +7,8 @@ export default function Custom404() {
     <div className={styles.container}>
       <div className={styles.text}>
         <p>
-          Perdón, pero parece que algo sospechoso está ocurriendo.
-          <br />
-          Tal parece que un &quot;Error 404&quot; ha ocurrido, no tengo la menor
-          idea de que sea, pero mejor vamonós.
+          Tal parece que un tal &quot;Error 404&quot; ha ocurrido, no tengo la
+          menor idea de que sea, pero mejor vamonós.
           <br />
           <br />
           ¿Quieres que te saque de este aprieto?

@@ -46,7 +46,7 @@ body {
   --cyan-dark: #009193;
   --cyan-dark-transparent: rgba(0, 145, 147, 0.25);
   --cyan-dark-dotted: rgba(0, 145, 147, 0.85);
-  --black-projects: rgba(230, 224, 224, 0.5);
+  --black-projects: rgba(230, 224, 224, 0.75);
   --pink: #009193;
   --pink-transparent: rgba(57, 53, 53, 0.075);
   --slogan-stroke: rgba(57, 53, 53, 0.25);
