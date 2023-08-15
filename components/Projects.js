@@ -53,7 +53,11 @@ export default function Projects() {
       {!device && (
         <section className={styles.scroll_section_outer}>
           <div ref={triggerRef}>
-            <div ref={sectionRef} className={styles.scroll_section_inner}>
+            <div
+              ref={sectionRef}
+              className={styles.scroll_section_inner}
+              style={{ width: `${data.length + 1}00vw` }}
+            >
               {data.map((item, index) => {
                 return (
                   <div
