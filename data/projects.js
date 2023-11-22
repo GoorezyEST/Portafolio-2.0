@@ -1,5 +1,11 @@
 export const data = [
   {
+  text: "SCM: Precios y conversión de criptomonedas",
+  image: "https://i.imgur.com/9UEwOaP.png",
+  alt: "SCM Website image",
+  link: "https://simple-crypto-monitor.vercel.app/"  
+  },
+  {
     text: "E-Booking: Ejemplo sitio web reservas electrónicas.",
     image: "https://i.imgur.com/gcnmkMy.png",
     alt: "E-Booking Website image",
